@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 3000px;
+}
+.div1-parent{
+    position: relative;
+}
+.div1{
+    position: absolute;
+}
+.form1{
+    margin-left: auto;
+}
+.links-parent{
+    position: relative;
+}
+.links{
+    position: absolute;
+    z-index: 3;
+}
+.a1{
+    font-size: 25px;
+    
+}
+.ul1 li i {
+    font-size: 40px;
+}
+@media (max-width: 750px){
+    .a1{
+        display: none;
+    }
+}
+ .car div img{
+    height: 100vh;
+    width: 100%;
+ }
+ .cap1{
+    background-color: rgba(128, 128, 128, 0.571);
+ }
+ .container-fluid{
+
+ }
+ .text-box1{
+    height: 300px;
+ }
+
+ .container-fluid h4{
+    display: inline-block       ;
+    background-image: -webkit-linear-gradient(45deg, #f3ab78, #af4261 );
+    -webkit-background-clip: text;
+        color: transparent;
+ }
+ .card-a1{
+    display: inline-block       ;
+    background-image: -webkit-linear-gradient(45deg, #ff9447, #ca1e4f );
+    -webkit-background-clip: text;
+        color: transparent;
+ }
+.press1:hover{
+    color: black;
+}
+
+.div2{
+    background-image: url(../images/back.jpg);
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.div3{
+    background-image: url(../images/pexels-jaime-reimer-2662116.jpg);
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.htwo1{
+    width: 100%;
+    text-align: center;
+    background-image: -webkit-linear-gradient(45deg, #ff9447, #ca1e4f );
+    -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block       ;
+
+}
+.card-columns .card{
+    position: relative;
+}
+.card-columns .card::after{
+    height: 0;
+    width: 0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 106, 255, 0.3);
+    transition: 1s;
+}
+.card-columns .card:hover::after{
+height: 100%;
+width: 100%;
+}
+
+
+/* ///////////////////////////// */
+.card-columns .card::before{
+    height: 0;
+    width: 0;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 106, 255, 0.3);
+    transition: 1s;
+}
+.card-columns .card:hover::before{
+height: 100%;
+width: 100%;
+}
+.card-body{
+    position: relative;
+}
+.card-columns .card .card-body a{
+    
+    position: absolute;
+    z-index: 3;
+}
+.a-parent{
+    width: 20px;
+    height: 30px;
+}
+.card-columns .card img{
+    object-fit: cover;
+    height: 300px;
+    width: 400px;
+}
+
+.cred{
+ 
+    height: 300px;
+    width: 250px; 
+}
+.row .col-md-4 .card-img-overlay{
+    text-align: center;
+    color: white;
+    transition: .7s;
+    background-color: rgba(128, 128, 128, 0.324);
+}
+.row .col-md-4 .card{
+    transition: .7s;
+
+}
+.row .col-md-4 .card-img-overlay:hover{
+    background-color: rgba(0, 106, 255, 0.227);
+
+}
+.row .col-md-4 .card:hover{
+    transform: scale(.9,.9);
+}
+.card-text-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.card-text-bottom h2{
+    background-color: grey;
+    height: 50px;
+}
+.side{
+    color: rgb(41, 40, 40);
+}
+.side .container{
+    padding: 0;
+}
+.side .container .info{
+    width: 65%;
+    
+    display: inline-block;
+
+}
+.side .container .info p{
+    line-height: 25px;
+}
+.side .container  .img-holder{
+    clip-path: polygon(36% -11%, 100% 0%, 117% 109%, 0% 100%);
+    
+    background-image: url(../images/par1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: inherit;
+display: inline-block;
+
+
+}
+.side .container  .img-holder2{
+    clip-path: polygon(36% -11%, 100% 0%, 117% 109%, 0% 100%);
+    
+    background-image: url(../images/par2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: inherit;
+display: inline-block;
+
+
+}
+.side .container  .img-holder3{
+    clip-path: polygon(36% -11%, 100% 0%, 117% 109%, 0% 100%);
+    
+    background-image: url(../images/par3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: inherit;
+display: inline-block;
+
+
+}
+.side .container  .img-holder img{
+height: 250px;    
+ width: 100%;
+position: absolute; 
+top: 0;
+
+
+}
+
+.line{
+    width: 50px;
+    height: 2px;
+    background-color: rgba(0, 106, 255, 0.727);
+    margin-left: 30px;
+}
+.row .text-center{
+    color:rgba(0, 76, 175, 0.882);
+}
+.credits hr{
+    background-color: white;
+}
+.credits .item1{
+    width: 30%;
+}
+.container-fluid hr{
+    background-color: white;
+}

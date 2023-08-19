@@ -1,0 +1,814 @@
+<html>
+    <head>
+        <title>Web development</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.xyz/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.xyz/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.xyz/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+      <div class="div1-parent">
+      <div class="div1 fixed-top ">
+        <nav class="navbar navbar-expand-md  bg-dark navbar-dark">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+              <img src="images/ddds.png" alt="Logo" style="width:40px;">
+            </a>
+            <a class="navbar-brand" href="#">Navbar</a>
+          
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse " id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Dropdown link
+                    </a>
+                    <div class="dropdown-menu">
+                      <div class="dropdown-header">Dropdown header 1</div>
+                      <a class="dropdown-item" href="#">Link 1</a>
+                      <a class="dropdown-item" href="#">Link 2</a>
+                      <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                  </li>
+              </ul>
+              <div class="input-group mx-3 ">
+                <input type="text" class="ml-auto  " placeholder="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-success" type="submit">Go</button>
+                </div>
+              </div> 
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">
+                Login
+              </button>  
+              <a class="a1 mx-2"  data-toggle="collapse" data-target="#content"><i class="fa-solid fa-share-nodes"></i></a>
+       
+            </div>
+            <!-- Button to Open the Modal -->
+
+
+
+          </nav>
+
+
+
+
+
+
+<div class="collapse links-parent  "  id="content">
+  <nav class="navbar !important links nav flex-column flex-row-reverse" >
+    
+  
+    <!-- Links -->
+    <ul class="navbar-nav ul1">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-brands fa-square-instagram"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-brands fa-square-snapchat"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+      </li>
+    </ul>
+  
+  </nav>
+  </div>
+  
+</div>
+</div>
+<!-- ///////////////////////////////////////////////////// -->
+
+
+
+
+
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header bg-primary">
+        <h4 class="modal-title text-white">Login</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form  class="needs-validation" novalidate>
+          <div class="form-group">
+            <label for="uname">Username:</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="custom-control custom-switch my-2">
+            <input type="checkbox" class="custom-control-input" id="switch1">
+            <label class="custom-control-label" for="switch1">Toggle me</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+        <script>
+        // Disable form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success mr-auto" data-dismiss="modal">Sign up</button>
+
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- //////////////////////////////////////////////////////////////////////// -->
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner car">
+    <div class="carousel-item active ">
+      <img src="images/car1.jpg"  alt="Los Angeles">
+      <div class="carousel-caption  h-50 cap1">
+        <h3>Great Schools</h3>
+        <p>We had such a great time in LA!</p>
+        <h1>Egypt's Greatest Schools</h1>
+        <button class="btn btn-primary m-2">Enroll now</button>
+        <button class="btn btn-light m-2">Learn More</button>
+      </div>
+    </div>
+    <div class="carousel-item ">
+      <img src="images/car2.jpg" alt="Chicago">
+     <div class="carousel-caption  h-50 cap1">
+        <h3>Great Schools</h3>
+        <p>We had such a great time in LA!</p>
+        <h1>Egypt's Greatest Schools</h1>
+        <button class="btn btn-primary m-2">Enroll now</button>
+        <button class="btn btn-light m-2">Learn More</button>
+      </div>
+    </div>
+    <div class="carousel-item ">
+      <img src="images/car3.jpg" alt="New York">
+      <div class="carousel-caption  h-50 cap1">
+        <h3>Great Schools</h3>
+        <p>We had such a great time in LA!</p>
+        <h1>Egypt's Greatest Schools</h1>
+        <button class="btn btn-primary m-2">Enroll now</button>
+        <button class="btn btn-light m-2">Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+
+
+
+<!-- /////////////////////////////////////////////////////////////// -->
+
+
+
+
+<div class="container-fluid p-3 bg-dark  text-white  ">
+  <h4 class="p-2">POSSIBLE OPTIONS</h4>
+  <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid commodi alias nesciunt debitis consectetur saepe placeat, fugiat dolores doloremque odio.</P>
+  <button class="btn btn-light">Learn More</button>
+</div>
+
+
+<!-- ////////////////////////////////////////////////// -->
+
+<div class="jumbotron">
+  <h1  class="text-center">Popular Schools In Egypt</h1>
+  
+</div>
+
+
+
+<!-- ///////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+
+<div id="accordion">
+
+  <div class="card shadow">
+    <div class="card-header bg-white">
+      <a class="card-link   card-a1" data-toggle="collapse" href="#collapseOne">
+        Collapsible Group Item #1
+      </a>
+    </div>
+    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+      <div class="card-body bg-dark text-white-50">
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio adipisci alias exercitationem qui accusamus iure sint dolore eum assumenda, vel voluptas accusantium iste nobis cupiditate dolorem vitae maxime ut consectetur nostrum debitis enim aliquam minima. Consequuntur cumque minus commodi tenetur, laboriosam impedit iure nulla sapiente quod quibusdam! Amet error, id quas labore nam, eos ab, officia omnis laboriosam hic natus est ratione eaque odit ad voluptatum excepturi delectus obcaecati. Totam ipsum libero nobis voluptatum modi a expedita voluptate similique dolor.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow">
+    <div class="card-header bg-white ">
+      <a class="collapsed card-link    card-a1   " data-toggle="collapse" href="#collapseTwo">
+        Collapsible Group Item #2
+      </a>
+    </div>
+    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+      <div class="card-body  bg-dark text-white-50">
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio adipisci alias exercitationem qui accusamus iure sint dolore eum assumenda, vel voluptas accusantium iste nobis cupiditate dolorem vitae maxime ut consectetur nostrum debitis enim aliquam minima. Consequuntur cumque minus commodi tenetur, laboriosam impedit iure nulla sapiente quod quibusdam! Amet error, id quas labore nam, eos ab, officia omnis laboriosam hic natus est ratione eaque odit ad voluptatum excepturi delectus obcaecati. Totam ipsum libero nobis voluptatum modi a expedita voluptate similique dolor.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card shadow">
+    <div class="card-header bg-white">
+      <a class="collapsed card-link  card-a1 " data-toggle="collapse" href="#collapseThree">
+        Collapsible Group Item #3
+      </a>
+    </div>
+    <div id="collapseThree" class="collapse" data-parent="#accordion">
+      <div class="card-body  bg-dark text-white-50 ">
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio adipisci alias exercitationem qui accusamus iure sint dolore eum assumenda, vel voluptas accusantium iste nobis cupiditate dolorem vitae maxime ut consectetur nostrum debitis enim aliquam minima. Consequuntur cumque minus commodi tenetur, laboriosam impedit iure nulla sapiente quod quibusdam! Amet error, id quas labore nam, eos ab, officia omnis laboriosam hic natus est ratione eaque odit ad voluptatum excepturi delectus obcaecati. Totam ipsum libero nobis voluptatum modi a expedita voluptate similique dolor.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ///////////////////////////////////////////////////////////// -->
+
+<div class="container-fluid bg-dark text-boxhead">
+  <h2 class="display-4 text-center text-white pb-3">Copy Transcript</h2>
+</div>
+
+
+
+<div class="container-fluid mb-2 bg-dark text-box1">
+  <h5 class="text-white pt-2" style="display: inline-block;">Click To Copy &nbsp;<h5 class="press1" style="display: inline-block;" > Press Here</h5></h5> <br>
+  <button  href="#" data-toggle="popover" id="btn1" title="Successful!" data-content="Copied"  class="btn btn-light m-2 text-primary">Copy</button>
+  
+  <div class="form-group  ">
+    <label for="comment">Comment:</label>
+    <textarea class="form-control" placeholder="translate" rows="5" id="comment"></textarea>
+  </div>
+</div>
+<!-- //////////////////////////////////////////// -->
+
+<div class="container-fluid bg-dark  ">
+
+  <h2 class="display-4 text-center text-white pb-3">Copy Scores</h2>
+</div>
+
+
+
+<div class="container-fluid bg-dark text-box1">
+  <h5 class="text-white pt-2" style="display: inline-block;">Click To Copy &nbsp;<h5 class="press1" style="display: inline-block;" > Press Here</h5></h5> <br>
+  <button  href="#" data-toggle="popover" id="btn1" title="Successful!" data-content="Copied"  class="btn btn-light m-2 text-primary">Copy</button>
+  
+  <div class="form-group  ">
+    <label for="comment">Comment:</label>
+    <textarea class="form-control" placeholder="translate" rows="5" id="comment"></textarea>
+  </div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+<!-- //////////////////////////////////////////// -->
+
+<div class="div2"></div>
+
+
+<!-- //////////////////////////////////////// -->
+
+
+
+
+<div class="container-fluid text-boxhead  mb-2">
+
+  <h2 class="display-4  htwo1 pb-3">Enrollment Options</h2>
+</div>
+
+
+
+<!-- /////////////////////////////////////////// -->
+
+
+
+
+<div class=" card-columns p-3">
+
+
+  <div class="card rounded-lg" style="width:400px; ">
+    <img class="card-img-top" src="images/card1.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="a-parent">
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+    </div>
+  </div><!-- card   -->
+
+  <div class="card rounded-lg" style="width:400px">
+    <img class="card-img-top" src="images/card2.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="a-parent">
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+        </div>
+  </div><!-- card   -->
+
+  <div class="card rounded-lg" style="width:400px">
+    <img class="card-img-top" src="images/card3.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="a-parent">
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+        </div>
+  </div><!-- card   -->
+
+</div>
+
+
+<div class=" card-columns p-3">
+
+
+  <div class="card rounded-lg" style="width:400px; ">
+    <img class="card-img-top" src="images/card4.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="a-parent">
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+    </div>
+  </div><!-- card   -->
+
+  <div class="card rounded-lg" style="width:400px">
+    <img class="card-img-top" src="images/card5.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="a-parent">
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+        </div>
+  </div><!-- card   -->
+
+  <div class="card rounded-lg" style="width:400px">
+    <img class="card-img-top" src="images/card6.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="a-parent">
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+        </div>
+  </div><!-- card   -->
+
+</div>
+
+
+
+
+<div class=" d-flex justify-content-around card-columns flex-wrap p-3">
+
+
+  <div class="card rounded-lg" style="width:400px; ">
+    <img class="card-img-top" src="images/card7.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="a-parent">
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+    </div>
+  </div><!-- card   -->
+
+  <div class="card rounded-lg" style="width:400px">
+    <img class="card-img-top" src="images/card8.jpg" alt="Card image">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="a-parent">
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+        </div>
+  </div><!-- card   -->
+
+</div>
+
+
+<!-- ////////////////////////////////////////////////////// -->
+<div class="div3"></div>
+<!-- //////////////////////////////////////////////////////////// -->
+
+
+
+<h2 class="display-4  htwo1 pb-3">Important Moments</h2>
+
+<div class="row">
+  <div class="col-md-4"> <div class="card" >
+
+    <img class="card-img-top cred" src="images/c1.jpg" alt="Card image">
+
+    <div class="card-img-overlay">
+      <h4 class="card-title">Teaching</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="card-text-bottom">
+        <img src="images/p1.jpg" style="height: 60px; width: 60px; border-radius: 50%;" alt="">
+        <h2>John : Teacher</h2>
+      </div>
+    
+    </div>
+
+  </div><!-- card -->
+</div>
+
+  <div class="col-md-4"><div class="card" >
+    <img class="card-img-top cred" src="images/c2.jpg" alt="Card image">
+    <div class="card-img-overlay">
+      <h4 class="card-title">Disscussion</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="card-text-bottom">
+        <img src="images/p2.jpg" style="height: 60px; width: 60px; border-radius: 50%;" alt="">
+        <h2>Punjab : Assistant</h2>
+      </div>
+    
+    </div>
+  </div><!-- card -->
+</div>
+
+  <div class="col-md-4"><div class="card" >
+    <img class="card-img-top cred" src="images/c3.jpg" alt="Card image">
+    <div class="card-img-overlay">
+      <h4 class="card-title">Dancing</h4>
+      <p class="card-text">Some example text.</p>
+      <div class="card-text-bottom">
+        <img src="images/p3.jpg" style="height: 60px; width: 60px; border-radius: 50%;" alt="">
+        <h2>Paul : principal</h2>
+      </div>
+    
+    </div>
+  </div><!-- card --></div>
+  
+</div>
+
+
+ <!-- //////////////////////////////////////////////////////////////// -->
+<div class="news my-3">
+  <h2 class="text-center  htwo1 ">School News</h2>
+<div class="side ">
+
+  
+  <div  class="container d-flex justify-content-between bg-light my-4  shadow">
+    <div  class="info p-3">
+  <h2>Lorem, ipsum dolor.</h2>
+  <span><i class="fa-solid fa-calendar-days "></i> September, 1996</span>
+  <div class="line"></div>
+  <p class="p-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsum recusandae voluptas rem velit labore modi cum impedit quibusdam dolores distinctio sapiente asperiores fugit eaque rerum doloribus exercitationem, accusamus, excepturi odit qui earum veniam harum! In reiciendis reprehenderit ratione. Deleniti obcaecati itaque voluptatibus beatae. Odio distinctio quo, iusto provident minus doloremque numquam commodi quibusdam consequuntur itaque necessitatibus minima dolor debitis quam iste architecto temporibus nostrum. Recusandae ducimus sint laboriosam velit.
+  </p>
+  </div><!-- info -->
+  
+  
+  
+  
+  <div class="img-holder ml-2 ">
+  
+    <!-- <img src="images/par1.jpg" alt=""> -->
+  
+  </div><!-- img -->
+  
+  
+  </div><!-- container -->
+  
+  
+  <div  class="container d-flex justify-content-between bg-light my-4  shadow">
+    <div  class="info p-3">
+  <h2>Lorem, ipsum dolor.</h2>
+  <span><i class="fa-solid fa-calendar-days "></i> September, 1996</span>
+  <div class="line"></div>
+  <p class="p-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsum recusandae voluptas rem velit labore modi cum impedit quibusdam dolores distinctio sapiente asperiores fugit eaque rerum doloribus exercitationem, accusamus, excepturi odit qui earum veniam harum! In reiciendis reprehenderit ratione. Deleniti obcaecati itaque voluptatibus beatae. Odio distinctio quo, iusto provident minus doloremque numquam commodi quibusdam consequuntur itaque necessitatibus minima dolor debitis quam iste architecto temporibus nostrum. Recusandae ducimus sint laboriosam velit.
+  </p>
+  </div><!-- info -->
+  
+  
+  
+  
+  <div class="img-holder2 ml-2 ">
+  
+    <!-- <img src="images/par1.jpg" alt=""> -->
+  
+  </div><!-- img -->
+  
+  
+  </div><!-- container -->
+    
+<div  class="container d-flex justify-content-between bg-light my-4  shadow">
+  <div  class="info p-3">
+<h2>Lorem, ipsum dolor.</h2>
+<span><i class="fa-solid fa-calendar-days "></i> September, 1996</span>
+<div class="line"></div>
+<p class="p-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis ipsum recusandae voluptas rem velit labore modi cum impedit quibusdam dolores distinctio sapiente asperiores fugit eaque rerum doloribus exercitationem, accusamus, excepturi odit qui earum veniam harum! In reiciendis reprehenderit ratione. Deleniti obcaecati itaque voluptatibus beatae. Odio distinctio quo, iusto provident minus doloremque numquam commodi quibusdam consequuntur itaque necessitatibus minima dolor debitis quam iste architecto temporibus nostrum. Recusandae ducimus sint laboriosam velit.
+</p>
+</div><!-- info -->
+
+
+
+
+<div class="img-holder3 ml-2 ">
+
+  <!-- <img src="images/par1.jpg" alt=""> -->
+
+</div><!-- img -->
+
+
+</div><!-- container -->
+
+
+    
+</div><!-- side -->
+</div><!-- news -->
+
+
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////// -->
+
+<div class="social">
+<h2 class="htwo1 mb-2">Connect With Us</h2>
+<div class="container">
+  <div class="row">
+    <div class="text-center bg-light shadow p-4 col-md-3"><h2>Follow</h2>
+   <a href="" class=""> <img src="images/face.png" alt=""></a>
+    <h3 class="mt-2">Go To Link</h3>
+    </div> 
+  
+
+
+
+
+    <div class="text-center bg-light shadow p-4 col-md-3"><h2>Follow</h2>
+   <a href="" class=""> <img src="images/ins.png" style="height: 60; width: 60;" alt=""></a>
+    <h3 class="mt-2">Go To Link</h3>
+    </div> 
+
+
+
+
+    <div class="text-center bg-light shadow p-4 col-md-3"><h2>Follow</h2>
+   <a href="" class=""> <img src="images/link.png" style="height: 60; width: 60;" alt=""></a>
+    <h3 class="mt-2">Go To Link</h3>
+    </div> 
+
+
+
+    <div class="text-center bg-light shadow p-4 col-md-3"><h2>Follow</h2>
+   <a href="" class=""> <img src="images/snap.png" style="height: 60; width: 60;" alt=""></a>
+    <h3 class="mt-2">Go To Link</h3>
+    </div> 
+
+
+
+</div><!--row  -->
+</div><!-- container -->
+</div><!-- social -->
+
+
+<!-- ///////////////////////////////////////////////////// -->
+
+
+
+<!-- start credits -->
+<div class="credits">
+<div class="d-flex justify-content-around bg-dark flex-wrap pt-2 mt-2">
+
+
+  <div class="item1 text-white text-center">
+    <hr>
+<img src="images/ddds.png" style="height: 60; width: 60; " alt="">
+<h3 class="" style="display: inline-block;" >good company</h3>
+<hr>
+<p>
+  tel : 0001000102 
+  <br>
+  <br>
+  Address : Alexandria
+  <br>
+  <br>
+  Hotline : 19999
+
+</p>
+
+</div><!-- item1 -->
+
+
+<div class="item1 text-white text-center">
+  <hr>
+<img src="images/ddds.png" style="height: 60; width: 60; " alt="">
+<h3 class="" style="display: inline-block;" >Give Us Feedback</h3>
+<hr>
+<p>
+<a href="">customer support</a>
+<br>
+<br>
+<a href="">Enrollment options</a>
+<br>
+<br>
+<a href="">Donations</a>
+
+</p>
+
+</div><!-- item1 -->
+
+
+<div class="item1 text-white text-center">
+  <hr>
+<img src="images/ddds.png" style="height: 60; width: 60; " alt="">
+<h3 class="" style="display: inline-block;" >Important Links</h3>
+<hr>
+<p>
+tel : 0001000102 
+<br>
+<br>
+Address : Alexandria
+<br>
+<br>
+Hotline : 19999
+
+</p>
+
+</div><!-- item1 -->
+
+
+
+
+</div><!-- d-flex -->
+</div><!-- credits -->
+
+<div class="container-fluid bg-dark text-white py-3">
+  <hr>
+<h2 class="htwo1">THE GREATEST SCHOOLS IN ALL OF ALEXANDRIA</h2>
+<HR></HR>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/script.js"></script>
+    </body>
+</html>
